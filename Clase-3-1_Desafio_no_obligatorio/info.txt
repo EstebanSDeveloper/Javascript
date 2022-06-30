@@ -1,0 +1,11 @@
+EJERCICIO 1
+
+Mi programa pide tu fecha de nacimiento, te pregunta si ya cumpliste años este año y en base a ello determina tu edad. 
+
+EJERCICIO 2 
+
+Mi programa te pregunta cuantas veces quieres imprimir la palabra Hola en la consola.  
+
+EJERCICIO 3 
+
+Mi programa te pide un número y le suma otro en cada repetición, realizando una salida por cada resultado.
