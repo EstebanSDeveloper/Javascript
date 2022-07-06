@@ -1,0 +1,2 @@
+El simulador interactivo es una herramienta para llevar inventarios, tiene 10 unidades
+y se le pueden restar o sumar unidades según venta o devolución de unidades. 
