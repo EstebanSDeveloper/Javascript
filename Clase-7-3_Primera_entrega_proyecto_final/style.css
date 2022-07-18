@@ -137,10 +137,49 @@ header ul li {
   margin-bottom: 5rem;
 }
 
+.input-group{
+
+  top: 16rem;
+  width: 25%;
+  
+}
+
+.position-phrase{
+  position: relative;
+  top: 12rem;
+  /* border: 1px solid red; */
+  z-index: 2;
+  color: #e9e2c4;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  background-color: #000000;
+  margin-bottom: rem;
+
+}
+
+.position-search{
+  position: absolute;
+  left: 38%; 
+  background-color: #000000;
+  /* border: 1px solid greenyellow; */
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+.position-collections{
+
+  background-color: #000000;
+}
+
 .row {
   background-color: black;
   align-items: center;
   justify-content: center;
+  margin-top: 6rem;
+  height: 100%;
 }
 
 .card {
