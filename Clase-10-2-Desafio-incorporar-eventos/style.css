@@ -176,11 +176,13 @@ header ul li {
 }
 
 .position-buttons  button:hover{
-
   background-color: rgb(0, 0, 0);
   color: #e9e2c4;
+}
 
-
+.position-buttons  button:focus{
+  background-color: rgb(60, 60, 60);
+  color: #e9e2c4;
 }
 
 .position-buttons{
@@ -188,6 +190,7 @@ header ul li {
   top: 9.5rem;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #000000;
 
 }

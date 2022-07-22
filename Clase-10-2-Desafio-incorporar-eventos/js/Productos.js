@@ -82,13 +82,13 @@ function renderizarProductos() {
 ProductosInfo.forEach((joyas) => {
 
     let productoHTML = `
-    <div class="col">
+    <div class="col store-product ${joyas.categoria}">
             <div class="card h-100">
             <img src="${joyas.img}" class="card-img-top" alt="...">
                 <div class="card-body">
                       <h5 class="card-title">${joyas.nombre}</h5>
                       <p class="card-text">$ ${joyas.precio}</p>
-                      <p class="card-text"> Category: ${joyas.categoria}</p>
+                      <p class="card-text"> <class="${joyas.categoria}"> Category: ${joyas.categoria}</p>
                       <p class="card-text"> Product ID: ${joyas.id} </p>
                       <button class="card-button">Add to car</button>
                 </div>
@@ -102,54 +102,76 @@ renderizarProductos();
 
 // FILTRADO DE PRODUCTOS CON BOTON
 
-// All products 
+// // All products 
 
-let filteredAll = ProductosInfo.filter(all => all.categoria != "")
+// let filteredAll = ProductosInfo.filter(all => all.categoria != "")
 
-let botonAll = document.getElementById("botonAll");
+// let botonAll = document.getElementById("botonAll");
 
-botonAll.onclick = () => {console.log(filteredAll)};
+// botonAll.onclick = () => {console.log(filteredAll)};
 
-//Rings
+// //Rings
 
-let filteredRigs = ProductosInfo.filter(rings => rings.categoria === "Rings")
+// let filteredRigs = ProductosInfo.filter(rings => rings.categoria === "Rings")
 
-let botonRings = document.getElementById("botonRings");
+// let botonRings = document.getElementById("botonRings");
 
-botonRings.onclick = () => {console.log(filteredRigs)};
+// botonRings.onclick = () => {console.log(filteredRigs)};
 
-//Chains
+// //Chains
 
-let filteredChains = ProductosInfo.filter(chains => chains.categoria === "Chains")
+// let filteredChains = ProductosInfo.filter(chains => chains.categoria === "Chains")
 
-let botonChains = document.getElementById("botonChains");
+// let botonChains = document.getElementById("botonChains");
 
-botonChains.onclick = () => {console.log(filteredChains)};
+// botonChains.onclick = () => {console.log(filteredChains)};
 
-// Bracelets
+// // Bracelets
 
-let filteredBracelets = ProductosInfo.filter(bracelets => bracelets.categoria === "Bracelets")
+// let filteredBracelets = ProductosInfo.filter(bracelets => bracelets.categoria === "Bracelets")
 
-let botonBracelets = document.getElementById("botonBracelets");
+// let botonBracelets = document.getElementById("botonBracelets");
 
-botonBracelets.onclick = () => {console.log(filteredBracelets)};
+// botonBracelets.onclick = () => {console.log(filteredBracelets)};
 
-// Earrings
+// // Earrings
 
-let filteredEarrings = ProductosInfo.filter(earrings => earrings.categoria === "Earrings")
+// let filteredEarrings = ProductosInfo.filter(earrings => earrings.categoria === "Earrings")
 
-let botonEarrings = document.getElementById("botonEarrings");
+// let botonEarrings = document.getElementById("botonEarrings");
 
-botonEarrings.onclick = () => {console.log(filteredEarrings)};
+// botonEarrings.onclick = () => {console.log(filteredEarrings)};
 
-// KeyChains
+// // KeyChains
 
-let filteredKeyChains = ProductosInfo.filter(keychains => keychains.categoria === "Keychains")
+// let filteredKeyChains = ProductosInfo.filter(keychains => keychains.categoria === "Keychains")
 
-let botonKeychains = document.getElementById("botonKeychains");
+// let botonKeychains = document.getElementById("botonKeychains");
 
-botonKeychains.onclick = () => {console.log(filteredKeyChains)};
-
-
+// botonKeychains.onclick = () => {console.log(filteredKeyChains)};
 
 
+let btns = document.querySelectorAll('.btn');
+let storeProducts = document.querySelectorAll('.store-product');
+
+for (i = 0; i < btns.length; i++) {
+
+   btns[i].addEventListener("click", (e) =>{
+      e.preventDefault();
+
+      const filter = e.target.dataset.filter;
+      //console.log(filter);
+
+      storeProducts.forEach((product)=> {
+         if (filter === 'botonAll'){
+            product.style.display = 'block';
+         }else {
+            if (product.classList.contains(filter)){
+               product.style.display = 'block';
+            } else {
+               product.style.display = 'none';
+            }
+         }
+      });
+   });
+};
