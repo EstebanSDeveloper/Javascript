@@ -34,6 +34,11 @@ header ul li {
   margin: 0 2rem;
 }
 
+.carrito{
+  width:3.5rem;
+  margin-left: -108px;
+}
+
 .container-fluid {
   --bs-gutter-x: none;
 }
@@ -197,6 +202,7 @@ header ul li {
 
 .row {
   background-color: black;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 6rem;
@@ -205,6 +211,10 @@ header ul li {
 
 .card {
   align-items: center;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 .card-title {
@@ -465,13 +475,12 @@ nav {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   background-color: #e9e2c4;
-  font-size: 3rem;
+  font-size: 2.5rem;
   border-radius: 25px;
   width: 340px;
   height: 40px;
-  padding: 3px;
   opacity: 75%;
-  top: 25px;
+  padding: 5px;
 }
 
 .text-video a {
@@ -486,7 +495,7 @@ nav {
   opacity: 60%;
   color: #e9e2c4;
   border: 2px solid #e9e2c4;
-  padding: 2px;
+  padding: 3px;
 }
 
 /* ---------------------------final sección 1---------------------------- */
